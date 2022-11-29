@@ -1,4 +1,4 @@
-package __Palindrome_Number
+package ___Palindrome_Number
 
 import "strconv"
 
