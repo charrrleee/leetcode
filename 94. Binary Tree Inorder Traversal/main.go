@@ -52,3 +52,23 @@ func inorderTraversal1(root *TreeNode) []int {
 	return list
 
 }
+
+func inorderTraversal3(root *TreeNode) []int {
+
+	list, currentNode := []int{}, root
+	var stack []*TreeNode
+
+	for currentNode != nil || len(stack) != 0 {
+		for currentNode != nil {
+			stack = append(stack, currentNode)
+			currentNode = currentNode.Left
+		}
+
+		currentNode = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+
+		list = append(list, currentNode.Val)
+		currentNode = currentNode.Right
+	}
+	return list
+}
