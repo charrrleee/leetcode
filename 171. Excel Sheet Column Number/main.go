@@ -25,7 +25,7 @@ func titleToNumber(columnTitle string) int {
 	return sum
 }
 
-// start from last 
+// start from last
 func titleToNumber2(columnTitle string) int {
 	//  ASCII A = 65
 	sum := 0
